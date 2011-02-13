@@ -1,0 +1,8 @@
+{application, tcp_server,
+ [{description, "A framework for network servers in TCP."},
+  {vsn, "0.0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {tcp_server_app, []}},
+  {env, []},
+  {applications, [kernel, stdlib, sasl]}]}.

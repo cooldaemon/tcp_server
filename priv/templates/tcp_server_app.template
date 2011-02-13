@@ -1,0 +1,21 @@
+%% -*- erlang -*-
+{variables, [
+  {appid, "tcp_server_app"},
+  {dest,  "{{appid}}"}
+]}.
+
+{dir, "{{dest}}"}.
+
+{template, "tcp_server_app_skel/src/tcp_server_app.app.src", "{{dest}}/src/{{appid}}.app.src"}.
+{template, "tcp_server_app_skel/src/tcp_server_app_app.erl", "{{dest}}/src/{{appid}}_app.erl"}.
+{template, "tcp_server_app_skel/src/tcp_server_app.erl", "{{dest}}/src/{{appid}}.erl"}.
+
+{template, "tcp_server_app_skel/test/tcp_server_app_SUITE.erl", "{{dest}}/test/{{appid}}_SUITE.erl"}.
+
+{file, "../../.gitignore", "{{dest}}/.gitignore"}.
+{file, "../../test/.gitignore", "{{dest}}/test/.gitignore"}.
+{file, "tcp_server_app_skel/rebar.config", "{{dest}}/rebar.config"}.
+{file, "../../rebar", "{{dest}}/rebar"}.
+{file, "tcp_server_app_skel/Makefile", "{{dest}}/Makefile"}.
+
+{chmod, 8#755, "{{dest}}/rebar"}.
