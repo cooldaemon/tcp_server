@@ -11,6 +11,7 @@
 {template, "tcp_server_app_skel/src/tcp_server_app.erl", "{{dest}}/src/{{appid}}.erl"}.
 
 {template, "tcp_server_app_skel/test/tcp_server_app_SUITE.erl", "{{dest}}/test/{{appid}}_SUITE.erl"}.
+{template, "tcp_server_app_skel/test/tcp_server_app.cover.spec", "{{dest}}/test/{{appid}}.cover.spec"}.
 
 {file, "../../.gitignore", "{{dest}}/.gitignore"}.
 {file, "../../test/.gitignore", "{{dest}}/test/.gitignore"}.

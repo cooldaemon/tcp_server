@@ -88,8 +88,6 @@ recv(true, _DummySocket, State, Mod, Option) ->
     ok
   end.
 
--type(packet()::[char()] | binary()).
-
 -spec call_mod(Active::boolean(), Socket::port(), Data::packet(), State::any(), Mod::module_name(), Option::#tcp_server_option{}) -> ok.
 call_mod(Active, Socket, Data, State, Mod, Option) ->
   case Mod:handle_call(Socket, Data, State) of

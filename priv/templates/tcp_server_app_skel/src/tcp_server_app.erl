@@ -24,8 +24,8 @@ init(_Args) ->
   {ok, {}}.
 
 -spec handle_call(Socket::port(), Data::packet(), State::{{appid}}_state()) -> {close | reply, packet(), {{appid}}_state()}.
-handle_call(_Socket, <<"bye\r\n">>, State) ->
-  {close, <<"cya\r\n">>, State};
+handle_call(_Socket, <<"bye\\r\\n">>, State) ->
+  {close, <<"cya\\r\\n">>, State};
 handle_call(_Socket, Data, State) ->
   {reply, Data, State}.
 

@@ -7,15 +7,11 @@ A simple module for implementing concurrent TCP servers in Erlang.
 * Supports active as well as passive mode of gen_tcp,
 * Based on OTP principles.
 
-### Building from Source
+### How to Use
     % cd /path/to
     % git clone git://github.com/cooldaemon/tcp_server.git
-    % cd ./tcp_server
-    % make
-
-### How to Use
-    % cd /path/to/tcp_server
-    % PROJECT=echo_server make app
-    % cd /path/to/echo_server
+    % cd ./to/tcp_server
+    % make app PROJECT=echo_server
+    % cd ../echo_server
     % make && make ct
 

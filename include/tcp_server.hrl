@@ -24,6 +24,8 @@
 %% @type result_info() = integer() | undefined
 -type(result_info()::integer() | undefined).
 
+-type(packet()::[char()] | binary()).
+
 %% @type listen_option() = [any()]. See gen_tcp:listen/2
 -type(listen_option()  ::[any()]).
 
